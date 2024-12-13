@@ -2,13 +2,12 @@ name: Publish prereleases
 
 on:
   push:
-    branches: [main, experimental]
+    branches: [main, experimental, ethan/experimental]
   pull_request:
     branches: [main, experimental]
 
 jobs:
   release:
-    if: ${{ github.repository_owner == 'opennextjs' }}
     name: Publish builder package
     runs-on: ubuntu-latest
 
